@@ -1,0 +1,102 @@
+:root {
+    --paynes-gray: #366279ff;
+    --silver: #CAD3D4ff;
+    --beaver: #A87C72ff;
+    --gray: #857C76ff;
+    --liver: #5D443Cff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#hero-section {
+    height: 343px;
+    background-image: url("./assets/hero-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-header {
+    background-color: var(--paynes-gray);
+    color: #ffffff;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+#hero-details {
+    background-color: var(--beaver);
+    color: #ffffff;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+#activities-section {
+    background-color: var(--silver);
+    height: 378px;
+}
+
+#activities-heading {
+    width:  400px;
+    margin: 0 auto;
+    padding: 30px 0 30px 0;
+}
+
+#activities {
+    display: flex;
+    justify-content: space-around;
+}
+
+.activity {
+    width: 300px;
+    text-align: center;
+}
+
+.activity-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#guide-section {
+    height: 600px;
+}
+
+#guide-card {
+    color: #ffffff;
+    display: flex;
+    margin: 30px auto;
+    background-color: var(--liver);
+    height: 500px;
+    width: 1000px;
+    border-bottom: 8px solid black;
+    border-radius: 15px;
+}
+
+#guide-img {
+    padding: 45px;
+    width: 400px;
+}
+
+#guide-heading {
+    width: 200px;
+    margin: 65px auto 30px;
+}
+
+#guide-intro { 
+    font-style: italic;
+    padding-right: 30px;
+}
+
+#guide-name {
+    width: 260px;
+    margin: 45px auto 0;
+}
+
