@@ -1,0 +1,129 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* layout */
+
+#container {
+    width: 700px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: #EDEDED;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #C6C6C6;
+    padding: 30px;
+}
+
+.logo {
+    width: 250px;
+}
+
+.user-avatar {
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.post-container {
+    margin-bottom: 35px;
+}
+
+.post-header {
+    display: flex;
+    padding-left: 20px;
+}
+
+.post-header-info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-top: 40px;
+}
+
+.post-img {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.post-like-count {
+    padding-top: 5px;
+    padding-left: 16px;
+}
+
+.post-comments {
+    list-style: none;
+    padding-left: 15px;
+    padding-bottom: 20px;
+}
+
+/* typography */
+
+h2,
+p {
+    margin: 0;
+}
+
+.post {
+    font-family: "Source Sans 3", sans-serif;
+}
+
+.username {
+    font-weight: 900;
+}
+
+.location {
+    font-weight: 400;
+}
+
+.post-like-count {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.comment {
+    font-size: 1rem;
+}
+
+/* colors */
+body {
+    background-color: #F5F5F5;
+}
+
+header,
+.post-container {
+    background-color: #FFF;
+}
+
+/* buttons */
+.btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.btn,
+.btn:hover {
+    background: none;
+    border: none;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.post-like-btn:hover {
+    content: url("./images/icon-heart-filled.png");
+}
+
+.post-comment-btn:hover {
+    content: url("./images/icon-comment.png");
+}
+
+.post-share-btn:hover {
+    content: url("./images/icon-dm.png");
+}
