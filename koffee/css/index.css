@@ -1,0 +1,153 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #7E7A79;
+}
+
+.container {
+    display: flex;
+}
+
+/*
+.reverse {
+    flex-direction: row-reverse;
+}
+*/
+
+.section-image {
+    display: block;
+    width: 50vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.section-info {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo-container {
+    width: 100%;
+    min-height: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container img {
+    width: 100px;
+}
+
+.section-heading {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: #0F0F0E;
+}
+
+.nav-btn-container {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 15px 20px;
+    margin: 5px;
+    background-color: #3A2713;
+    color: whitesmoke;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.nav-btn:hover,
+.nav-btn:focus {
+    background-color: #AB8A5D;
+    color: whitesmoke;
+}
+
+.reviews-container {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    min-height: 1.5rem;
+}
+
+.reviews-container-hidden {
+    opacity: 0;
+}
+
+.review {
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-style: italic;
+    transition: ease-in-out;
+}
+
+
+.cart-btn-bg {
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #AB8A5D;
+    box-shadow: 3px 3px #3A2713;
+}
+
+
+.cart-btn-icon {
+    width: 60%;
+    margin: auto;
+}
+
+.cart-btn-bg:hover,
+.cart-btn-bg:focus {
+    background-color: #916D4B;
+    box-shadow: 3px 3px #AB8A5D;
+}
+
+.btn-active {
+    cursor: pointer
+}
+
+.btn-inactive {
+    pointer-events: none;
+    opacity: 50%;
+}
+
+.checkout-modal {
+    width: 50%;
+    height: 75%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #AB8A5D;
+}
+
+.checkout-btn-close {
+    position: relative;
+    top: 0px;
+    left: 98%;
+    background: none;
+    border: none;
+    font-size: 1rem;
+}
+
+.checkout-btn-close:hover,
+.checkout-btn-close:focus {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
