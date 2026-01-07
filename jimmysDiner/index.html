@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Jimmy's Diner</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div id="root-container" class="root-container">
+      <header>
+        <div class="banner-txt">
+          <h1>Jimmy's Diner</h1>
+          <h2>Best burgurs and pizzas in town.</h2>
+        </div>
+      </header>
+
+      <main id="items-container">
+      </main>
+
+      <div id="order-summary-container" class="order-summary-container hidden">
+        <h3 class="order-summary-heading">Your order</h3>
+        <ul id="order-summary" class="order-summary"></ul>
+        <div class="order-total">
+          <h3>Total Price:</h3>
+          <p id="order-total-price"></p>
+        </div>
+        <button id="order-complete-btn" class="order-complete-btn" type="">Complete order</button>
+      </div>
+
+      <div id="payment-confirmation-container" class="payment-confirmation-container hidden">
+        <h3 id="payment-confirmation-message"></h3>
+      </div>
+    </div>
+
+
+    <div id="payment-modal" class="payment-modal hidden">
+      <button id="payment-modal-exit-btn" class="payment-modal-exit-btn">X</button>
+      <h3>Enter card details</h3>
+      <form id="payment-form">
+        <input 
+          class="payment-details-input"
+          type="text" 
+          name="card-holder-name" 
+          placeholder="Enter your name" 
+          pattern="[A-Za-z]+"
+          required
+          value=""
+        >
+        <input 
+          class="payment-details-input"
+          type="text" 
+          name="card-number" 
+          placeholder="Enter card number" 
+          pattern="[0-9]+"
+          minlength="16"
+          maxlength="16"
+          required
+          value=""
+        >
+        <input 
+          class="payment-details-input"
+          type="text"
+          name="card-ccv"
+          placeholder="Enter CCV"
+          pattern="[0-9]+" 
+          minlength="3"
+          maxlength="4"
+          required
+          value=""
+        >
+        <button id="pay-btn" class="pay-btn" type="submit">Pay</button>
+      </form>
+    </div>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
