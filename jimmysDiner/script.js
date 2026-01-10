@@ -1,4 +1,5 @@
 import { menuArray } from './data.js';
+import { binarySearch } from './binarySearch.js';
 
 /* vars */
 let totalOrderPrice = 0;
@@ -20,9 +21,10 @@ itemsContainer.addEventListener('click', e => {
     return;
   }
 
-  const targetItem = menuArray.filter(
-    itemObj => itemObj.id == e.target.dataset.itemId
-  )[0];
+  // const targetItem = menuArray.filter(
+  //   itemObj => itemObj.id == e.target.dataset.itemId
+  // )[0];
+  const targetItem = binarySearch(menuArray, e.target.dataset.itemId);
 
   // create order element
   const orderItem = document.createElement('li');
@@ -56,9 +58,10 @@ document.addEventListener('click', e => {
     return;
   }
 
-  const targetItem = menuArray.filter(
-    itemObj => itemObj.id == e.target.dataset.itemId
-  )[0];
+  // const targetItem = menuArray.filter(
+  //   itemObj => itemObj.id == e.target.dataset.itemId
+  // )[0];
+  const targetItem = binarySearch(menuArray, e.target.dataset.itemId);
 
   // update total order price and count
   totalOrderPrice -= targetItem.price;
