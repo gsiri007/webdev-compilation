@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link href="./style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+    <form id="color-form">
+      <input id="seed" type="color" name="seed" value="#F55A5A">
+      <select id="scheme-mode" name="scheme-mode">
+        <option value="monochrome" selected>Monochrome</option>
+        <option value="monochrome-dark">Monochrome-Dark</option>
+        <option value="monochrome-light">Monochrome-Light</option>
+      </select>
+      <button type="submit">Get color scheme</button>
+    </form>
+    <div id="scheme-container" class="scheme-container">
+      <div class="color-column" id="columnOne" data-hex="#F55A5A"></div>
+      <div class="color-column" id="columnTwo" data-hex="#2B283A"></div>
+      <div class="color-column" id="columnThree" data-hex="#FBF3AB"></div>
+      <div class="color-column" id="columnFour" data-hex="#AAD1B6"></div>
+      <div class="color-column" id="columnFive" data-hex="#A626D3"></div>
+    </div>
+    <div id="hex-container" class="hex-container">
+      <p class="hex-value">#F55A5A</p>
+      <p class="hex-value">#2B283A</p>
+      <p class="hex-value">#FBF3AB</p>
+      <p class="hex-value">#AAD1B6</p>
+      <p class="hex-value">#A626D3</p>
+    </div>
+  </div>
+  <script src="./script.js" type="module"></script>
+</body>
+
+</html>

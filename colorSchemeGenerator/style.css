@@ -1,0 +1,111 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#color-form,
+.scheme-container,
+.hex-container {
+  max-width: 550px;
+}
+
+#color-form {
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+  align-items: end;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+#seed,
+#scheme-mode,
+button {
+  height: 2.625em;
+}
+
+#scheme-mode,
+button {
+  background: none;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+#seed {
+  width: 4em;
+  border: 3px solid lightgrey;
+}
+
+#scheme-mode {
+  width: 19.5em;
+  padding: 0.5em;
+  flex-grow: 1;
+}
+
+button {
+  padding: 0.25em 1em;
+  margin-left: auto;
+}
+
+button:hover,
+button:focus {
+  cursor: pointer;
+}
+
+.scheme-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  min-height: 500px;
+  width: 100%;
+}
+
+.color-column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+
+#columnOne {
+  background-color: #F55A5A;
+}
+
+#columnTwo {
+  background-color: #2B283A;
+}
+
+#columnThree {
+  background-color: #FBF3AB;
+}
+
+#columnFour {
+  background-color: #AAD1B6;
+}
+
+#columnFive {
+  background-color: #A626D3;
+}
+
+.hex-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.hex-value {
+  padding: 1em;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  color: #2B283A;
+}
