@@ -1,4 +1,5 @@
 import http from 'node:http';
+import path from 'node:path'
 import fs from 'node:fs';
 import {
   httpResponseHandler,
@@ -7,11 +8,15 @@ import {
   getMoviesOnQuery
 } from './utils.js';
 
+const __dirname = import.meta.dirname;
+
 // reading json data into memory
+
+const pathToData = path.join(__dirname, 'data.json');
 
 let MOVIE_DATA = null;
 
-fs.readFile('./data.json', (err, data) => {
+fs.readFile(pathToData, (err, data) => {
   if (err) {
     console.error('ERROR: json data missing, aborting....');
     process.exit(1);
