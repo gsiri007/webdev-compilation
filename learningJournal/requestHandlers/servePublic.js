@@ -28,17 +28,22 @@ export const servePublic = async (url, res) => {
 
   } catch (error) {
     if (error === 'ENOENT') {
+
       res.status = 404;
       res.setHeader('Content-Type', 'json');
       //TODO: add a 404.html
       res.end(JSON.stringify({ message: 'Error: 404 not found' }))
+
+    } else {
+
+      res.status = 500;
+      res.setHeader('Content-Type', 'json');
+      //TODO: add a 404.html
+      res.end(JSON.stringify({ message: 'Error: 500' }))
+
+      console.log("ERROR: ", error);
     }
 
-    res.status = 500;
-    res.setHeader('Content-Type', 'json');
-    //TODO: add a 404.html
-    res.end(JSON.stringify({ message: 'Error: 500' }))
-    console.log("ERROR: ", error);
   }
 
 };
