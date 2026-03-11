@@ -29,10 +29,13 @@ document.getElementById('search-btn').addEventListener('click', async () => {
   const books = data.docs;
 
   for (let i = 0; i < 10 && i < books.length; ++i) {
-    console.log(books[i]);
+    const html = `
+      <img src="https://covers.openlibrary.org/b/ID/${books[i].cover_i}-M.jpg" />
+    `
+    console.log(html);
   }
 
 
   search.value = "";
-
+  
 });
