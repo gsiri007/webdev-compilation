@@ -74,6 +74,27 @@ header a {
   cursor: pointer;
 }
 
+#book-card-container {
+  width: 25vw;
+  margin: 5em auto;
+}
+
+.book-card {
+  display: flex;
+  margin-bottom: 2em;
+}
+
+.book-card .book-cover {
+  width: 100px;
+}
+
+.book-card .book-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-left: 2em;
+}
+
 .stamp {
   color: grey;
   display: flex;
@@ -86,4 +107,8 @@ header a {
 
 .stamp img {
   width: 100px;
+}
+
+.disabled {
+  display: none;
 }
