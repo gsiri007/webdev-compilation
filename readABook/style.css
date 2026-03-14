@@ -109,6 +109,10 @@ header a {
   width: 100px;
 }
 
+.stamp h2 {
+  width: 25%;
+}
+
 .disabled {
   display: none;
 }

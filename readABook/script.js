@@ -60,5 +60,13 @@ document.getElementById('search-btn').addEventListener('click', async () => {
     bookCards.push(bookCard);
   }
 
-  bookCardContainer.innerHTML = bookCards.join('\n');
+  if (books.length == 0) {
+    stamp.innerHTML = `
+    <h2>
+      Unable to find what  you're looking for. Please try another search.
+    </h2>`;
+    stamp.classList.remove('disabled');
+  } else {
+    bookCardContainer.innerHTML = bookCards.join('\n');
+  }
 });
