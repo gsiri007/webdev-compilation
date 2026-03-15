@@ -5,11 +5,12 @@ const stamp = document.getElementById('stamp')
 document.getElementById('search-btn').addEventListener('click', async () => {
   const searchValue = search.value;
   search.value = "";
-  stamp.classList.add('disabled');
 
   if (!searchValue) {
     return;
   }
+
+  stamp.classList.add('disabled');
 
   const baseURL = "https://openlibrary.org/search.json";
   const title   = searchValue.split(' ').join('+');
@@ -60,7 +61,7 @@ document.getElementById('search-btn').addEventListener('click', async () => {
     bookCards.push(bookCard);
   }
 
-  if (books.length == 0) {
+  if (books.length === 0) {
     stamp.innerHTML = `
     <h2>
       Unable to find what  you're looking for. Please try another search.
