@@ -77,6 +77,7 @@ header a {
 #book-card-container {
   width: 25vw;
   margin: 5em auto;
+  padding-bottom: 0.6em;
 }
 
 .book-card {
@@ -93,6 +94,21 @@ header a {
   flex-direction: column;
   gap: 0.5em;
   margin-left: 2em;
+}
+
+.book-card .add-btn {
+  font: inherit;
+  font-size: 0.8rem;
+  width: 60px;
+  height: 20px;
+  border: none;
+  background-color: yellowgreen;
+  border-radius: 10px;
+}
+
+.add-btn:hover,
+.add-btn:focus {
+  cursor: pointer;
 }
 
 .stamp {

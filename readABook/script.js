@@ -55,6 +55,7 @@ document.getElementById('search-btn').addEventListener('click', async () => {
           <h2 class="name">${books[i]?.title}</h2>
           <p class="author">${books[i]?.author_name[0]}</p>
           <p class="year">${books[i]?.first_publish_year}</p>
+          <button class="add-btn">Add</button>
         </div>
       </div>`;
 
