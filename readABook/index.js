@@ -46,6 +46,7 @@ document.getElementById('search-btn').addEventListener('click', async () => {
       coverSrc = './img/book.png';
     }
 
+
     const bookCard = `
       <div id="book-card" class="book-card">
         <img class="book-cover"
@@ -55,7 +56,15 @@ document.getElementById('search-btn').addEventListener('click', async () => {
           <h2 class="name">${books[i]?.title}</h2>
           <p class="author">${books[i]?.author_name[0]}</p>
           <p class="year">${books[i]?.first_publish_year}</p>
-          <button class="add-btn">Add</button>
+          <button
+            class="add-btn"
+            data-title="${books[i]?.title}"
+            data-cover-src="${coverSrc}"
+            data-author="${books[i]?.author_name[0]}"
+            data-year="${books[i]?.first_publish_year}"
+          >
+            Add
+          </button>
         </div>
       </div>`;
 
@@ -72,3 +81,23 @@ document.getElementById('search-btn').addEventListener('click', async () => {
     bookCardContainer.innerHTML = bookCards.join('\n');
   }
 });
+
+document.getElementById("book-card-container").addEventListener('click', e => {
+  if (e.target.nodeName !== 'BUTTON' && e.target.getAttribute('class') === 'add-btn') {
+    return;
+  }
+
+  const book = {
+    title: e.target.dataset.title,
+    cover: e.target.dataset.coverSrc,
+    author: e.target.dataset.author,
+    year: e.target.dataset.year
+  };
+
+  const key = Math.floor(Math.random() * 1000);
+
+  localStorage.setItem(key, JSON.stringify(book));
+
+  e.target.disabled = true;
+});
+
