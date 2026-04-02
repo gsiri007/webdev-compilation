@@ -96,18 +96,28 @@ header a {
   margin-left: 2em;
 }
 
-.book-card .add-btn {
+.book-card .add-btn,
+.book-card .remove-btn {
   font: inherit;
   font-size: 0.8rem;
   width: 60px;
   height: 20px;
   border: none;
-  background-color: yellowgreen;
   border-radius: 10px;
 }
 
+.book-card .add-btn {
+  background-color: yellowgreen;
+}
+
+.book-card .remove-btn {
+  background-color: indianred;
+}
+
 .add-btn:hover,
-.add-btn:focus {
+.add-btn:focus,
+.remove-btn:hover,
+.remove-btn:focus {
   cursor: pointer;
 }
 

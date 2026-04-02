@@ -83,7 +83,7 @@ document.getElementById('search-btn').addEventListener('click', async () => {
 });
 
 document.getElementById("book-card-container").addEventListener('click', e => {
-  if (e.target.nodeName !== 'BUTTON' && e.target.getAttribute('class') === 'add-btn') {
+  if (e.target.getAttribute('class') !== 'add-btn') {
     return;
   }
 
